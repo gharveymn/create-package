@@ -4,7 +4,7 @@ PROJECT(test_static
 
 CREATE_PACKAGE(AUTHOR       gharveymn
                TYPE         STATIC
-               INCLUDE_PATH source/inc
-               SOURCE_PATH  source/src
+               HEADERS_PATH source/inc
+               SOURCES_PATH source/src
                HEADERS      test-static.hpp
                SOURCES      test-static.cpp)

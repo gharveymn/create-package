@@ -4,5 +4,5 @@ PROJECT(test_header_only
 
 CREATE_PACKAGE(AUTHOR       gharveymn
                NAME         test_header_only
-               INCLUDE_PATH source/inc
+               HEADERS_PATH source/inc
                HEADERS      test-header-only.hpp)
