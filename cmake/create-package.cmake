@@ -6,6 +6,8 @@ INCLUDE(\"\${CMAKE_CURRENT_LIST_DIR}/@PACKAGE_TARGETS_FILE_NAME@\")
 CHECK_REQUIRED_COMPONENTS(@PACKAGE_NAME@)
 ")
 
+SET(CREATE_PACKAGE_FILE "${CMAKE_CURRENT_LIST_FILE}")
+
 MACRO(INITIALIZE_DEPENDENCY name)
   FIND_PACKAGE(${name} QUIET)
   IF("${name}_FOUND")
@@ -16,8 +18,11 @@ MACRO(INITIALIZE_DEPENDENCY name)
     ELSE()
       MESSAGE(STATUS "Initializing ${name} in git submodule")
       EXECUTE_PROCESS(COMMAND "git submodule update --init -- \"external/${name}\""
-                      WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
-      ADD_SUBDIRECTORY("${CMAKE_CURRENT_SOURCE_DIR}/external/${name}" EXCLUDE_FROM_ALL)
+                      WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
+      ADD_SUBDIRECTORY("${PROJECT_SOURCE_DIR}/external/${name}" "external/${name}" EXCLUDE_FROM_ALL)
+
+      # ensure our macros didnt get overwritten by the subscope
+      INCLUDE("${CREATE_PACKAGE_FILE}")
     ENDIF()
   ENDIF()
 ENDMACRO()
