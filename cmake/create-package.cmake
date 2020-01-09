@@ -174,7 +174,7 @@ MACRO(CREATE_PACKAGE)
 
   # Unset everything
   FOREACH(VAR ${PACKAGE_VARIABLES})
-    UNSET(${VAR})
+    UNSET(PACKAGE_${VAR})
   ENDFOREACH()
   
   # Set parsing meta-arguments
