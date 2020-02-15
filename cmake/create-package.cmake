@@ -19,9 +19,8 @@ MACRO(INITIALIZE_DEPENDENCY name)
       MESSAGE(STATUS "Found inherited target ${name}")
     ELSE()
       MESSAGE(STATUS "Initializing ${name} in git submodule")
-      EXECUTE_PROCESS(COMMAND git submodule update --init -- "external/${name}"
-                      WORKING_DIRECTORY "${PROJECT_SOURCE_DIR}"
-                      OUTPUT_QUIET)
+      EXECUTE_PROCESS(COMMAND git submodule --quiet update --init -- "external/${name}"
+                      WORKING_DIRECTORY "${PROJECT_SOURCE_DIR}")
       ADD_SUBDIRECTORY("${PROJECT_SOURCE_DIR}/external/${name}" "external/${name}" EXCLUDE_FROM_ALL)
 
       # ensure our macros didnt get overwritten by the subscope
