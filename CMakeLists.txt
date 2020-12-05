@@ -1,6 +1,6 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.1)
 PROJECT(create-package
-        VERSION 0.0.1
+        VERSION 0.0.2
         LANGUAGES NONE)
 
 INCLUDE(cmake/create-package.cmake)
