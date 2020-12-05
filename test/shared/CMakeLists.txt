@@ -5,6 +5,6 @@ PROJECT(test_shared
 CREATE_PACKAGE(AUTHOR       gharveymn
                TYPE         SHARED
                HEADERS_PATH source/inc
-               SOURCES_PATH  source/src
+               SOURCES_PATH source/src
                HEADERS      test-shared.hpp
                SOURCES      test-shared.cpp)

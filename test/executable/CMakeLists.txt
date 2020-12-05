@@ -2,7 +2,7 @@ PROJECT(test_executable
         VERSION 0.0.1
         LANGUAGES CXX)
 
-SET(DEP GHARVEYMN::test_shared)
+SET(DEP GHARVEYMN::test_header_only)
 
 INITIALIZE_DEPENDENCY(${DEP})
 

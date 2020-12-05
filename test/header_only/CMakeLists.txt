@@ -5,4 +5,4 @@ PROJECT(test_header_only
 CREATE_PACKAGE(AUTHOR       gharveymn
                NAME         test_header_only
                HEADERS_PATH source/inc
-               HEADERS      test-header-only.hpp)
+               HEADERS      gharveymn/test-header-only.hpp)

@@ -7,7 +7,7 @@
  * of the MIT license. See the LICENSE file for details.
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
  
-#include <test-shared.hpp>
+#include <gharveymn/test-header-only.hpp>
 
 int main (void)
 {
