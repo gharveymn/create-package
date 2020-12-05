@@ -7,7 +7,7 @@
  * of the MIT license. See the LICENSE file for details.
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
  
-#include <test-static.hpp>
+#include "gharveymn/test-static.hpp"
 
 #include <iostream>
 

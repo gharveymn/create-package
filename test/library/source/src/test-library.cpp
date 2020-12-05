@@ -7,7 +7,7 @@
  * of the MIT license. See the LICENSE file for details.
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
  
-#include <test-library.hpp>
+#include "gharveymn/test-library.hpp"
 
 #include <iostream>
 
