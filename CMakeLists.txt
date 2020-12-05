@@ -14,6 +14,8 @@ WRITE_BASIC_PACKAGE_VERSION_FILE("${PROJECT_BINARY_DIR}/create-package-config-ve
                                  VERSION       "${PROJECT_VERSION}"
                                  COMPATIBILITY "ExactVersion")
 
+EXPORT(PACKAGE create-package)
+
 # Only include tests if we are at the top level
 IF(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
   OPTION(CREATE_PACKAGE_BUILD_TESTS "Set to ON to build tests" ON)
