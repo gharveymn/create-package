@@ -7,4 +7,5 @@ CREATE_PACKAGE(AUTHOR       gharveymn
                HEADERS_PATH source/inc
                SOURCES_PATH source/src
                HEADERS      test-shared.hpp
-               SOURCES      test-shared.cpp)
+               SOURCES      test-shared.cpp
+               NO_HEADERS_PREFIX)
